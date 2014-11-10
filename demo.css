@@ -1,0 +1,22 @@
+hmtl, body{
+	font-family: arial, sans-serif;
+}
+input[type='text'], p{
+	font-size: 30px;
+}
+
+li{
+	font-size: 25px;
+}
+
+h1{
+	margin-top: 60px;
+	margin-bottom: 0;
+}
+
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}

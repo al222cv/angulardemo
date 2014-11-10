@@ -20,6 +20,31 @@ myApp.factory('myData', function(){
 
 });
 
+myApp.directive('message', function(myData){
+	return {
+		restrict: 'E', //Kan vara E, A eller C
+		
+		scope: {
+			text: '=',
+		},
+		
+		template: '{{text}} <button ng-click="removeMessage()">X</button>',
+		
+		link: function(scope, element, attrs){
+		
+			scope.removeMessage = function(){
+				myData.removeMessage(scope.$parent.$index);
+			};
+		
+		// scope: {
+		// 	text: '=',
+		// 	hideDeleteButton: '@'
+		// },
+		// template: '{{text}} <button ng-hide="hideDeleteButton" ng-click="removeMessage()">X</button>',
+		}
+	}	
+});
+
 myApp.controller('FirstCtrl', function($scope, myData){
 	$scope.messages = myData.messages;
 
@@ -31,9 +56,4 @@ myApp.controller('FirstCtrl', function($scope, myData){
 
 myApp.controller('SecondCtrl', function($scope, myData){
 	$scope.messages = myData.messages;
-
-	$scope.removeMessage = function(index){
-		myData.removeMessage(index);
-	};
-
 });

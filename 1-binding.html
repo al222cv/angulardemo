@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Angular demo</title>
-
-	<style type="text/css">
-		*{
-			font-family: arial, sans-serif;
-		}
-		input[type='text'], p{
-			font-size: 30px;
-		}
-		.red{
-			color: red;
-		}
-		.green{
-			color: green;
-		}
-	</style>	
-
+	<title>1 - Bindings</title>
+	
+	<link rel="stylesheet" type="text/css" href="demo.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 </head>
 <body>
 	<div ng-app>
 
 		<div id="example-1">
-			<p>1 + 1 = {{1 + 1}}</p>
-			<p>2 * 2 = {{2 * 2}}</p>
+			<p>{{2 + 1}}</p>
+			<p>{{3 * 2}}</p>
 			<p>{{'Jag heter' + ' Andreas!'}}</p>
 		</div>
 

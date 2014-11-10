@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>3 - Share data</title>
+	<title>4 - Directives</title>
 
   <link rel="stylesheet" type="text/css" href="demo.css">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script type="text/javascript" src="3-share-data.js"></script>
+	<script type="text/javascript" src="4-directives.js"></script>
 </head>
 <body>
 	<div ng-app="myApp">
 
-		<div ng-controller="FirstCtrl">
+		<video src="movie.mp4"></video> <!-- controls autoplay -->
+
+<!-- 		<div ng-controller="FirstCtrl">
 			<h1>FirstCtrl</h1>
-			
+		
 			<form ng-submit="addMessage(newMessage)">
 				<input type="text" ng-model="newMessage">
 				<button type="submit">Add message</button>
@@ -21,10 +23,10 @@
 
 			<ul>
 				<li ng-repeat="message in messages">
-					{{message}}
+					<message text="message">
 				</li>
 			</ul>
-			
+		
 		</div>
 
 		<div ng-controller="SecondCtrl">
@@ -32,12 +34,12 @@
 
 			<ul>
 				<li ng-repeat="message in messages">
-					{{message}} <button ng-click="removeMessage($index)">X</button>
+					<message text="message">
 				</li>
 			</ul>
 
 		</div>
-
+ -->
 	</div>
 </body>
 </html>
