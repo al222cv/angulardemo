@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular demo</title>
+
+	<style type="text/css">
+		*{
+			font-family: arial, sans-serif;
+		}
+		input[type='text'], p, button{
+			font-size: 30px;
+		}
+		.red{
+			color: red;
+		}
+		.green{
+			color: green;
+		}
+	</style>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script type="text/javascript" src="2-controllers.js"></script>
+</head>
+<body>
+	<!-- Controllers är 'länken' mellan datat och vyn -->
+
+	<div ng-app>
+
+		<div id="example-1" ng-controller="FirstCtrl">
+			<p>{{message}} world!</p>
+			<button ng-click="changeMessage()">Change message</button>
+		</div>
+
+		<!-- <div id="example-2" ng-controller="SecondCtrl">
+			<p>{{message}}</p>
+		</div> -->
+
+	</div>
+</body>
+</html>

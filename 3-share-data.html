@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular demo</title>
+
+	<style type="text/css">
+		*{
+			font-family: arial, sans-serif;
+		}
+		input[type='text'], p, button{
+			font-size: 30px;
+		}
+		.red{
+			color: red;
+		}
+		.green{
+			color: green;
+		}
+		div > div{
+			margin-bottom: 100px;
+		}
+	</style>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script type="text/javascript" src="3-share-data.js"></script>
+</head>
+<body>
+	<div ng-app="myApp">
+
+		<div id="example-1" ng-controller="FirstCtrl">
+			<h1>FirstCtrl</h1>
+			<p>{{data.message}}</p>
+
+			<input type="text" ng-model="newMessage">
+			<button ng-click="changeMessage(newMessage)">Change message</button>
+		</div>
+
+		<div id="example-2" ng-controller="SecondCtrl">
+			<h1>SecondCtrl</h1>
+			<p>{{data.message}}</p>
+		</div>
+
+	</div>
+</body>
+</html>
